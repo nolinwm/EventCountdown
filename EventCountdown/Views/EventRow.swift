@@ -16,7 +16,6 @@ struct EventRow: View {
             Image(systemName: "circle.fill")
                 .foregroundColor(Color(hex: event.colorAsHex))
             Text(event.name ?? "Event")
-                .font(.headline)
             Spacer()
         }
     }

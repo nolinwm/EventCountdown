@@ -16,7 +16,7 @@ struct EventDetailView: View {
     
     @State var name: String
     @State private var date: Date = Date.midnightTomorrow()
-    @State private var color: Color = .blue
+    @State private var color: Color = Color(hex: "#285FF4")
     
     private var saveDisabled: Bool {
         return name.isEmpty || date <= Date.now
@@ -41,7 +41,6 @@ struct EventDetailView: View {
             
             Form {
                 TextField("Event Name", text: $name)
-                    .font(.headline)
                     .padding(10)
                 DatePicker("Occurs", selection: $date)
                     .padding(10)
@@ -69,6 +68,7 @@ struct EventDetailView: View {
             event.colorAsHex = Color.convertToHex(self.color)
         } else {
             let newEvent = Event(context: moc)
+            newEvent.id = UUID()
             newEvent.name = self.name
             newEvent.date = self.date
             newEvent.colorAsHex = Color.convertToHex(self.color)

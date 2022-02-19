@@ -34,10 +34,11 @@ struct TimeCard: View {
         .background(
             RoundedRectangle(cornerRadius: 40)
                 .foregroundColor(value > 0 ? color : .gray)
-                .shadow(color: .black.opacity(value > 0 ? 0.125 : 0), radius: 10, x: 0, y: 15)
+                .shadow(color: .black.opacity(value > 0 ? 0.125 : 0.0625), radius: 10, x: 0, y: 15)
+                .scaleEffect(value > 0 ? 1 : 0.9)
+                .animation(.spring(response: 0.25, dampingFraction: 0.65, blendDuration: 1).delay(delay), value: value)
         )
         .scaleEffect(animate ? 1 : 0)
-        .scaleEffect(value > 0 ? 1 : 0.825)
         .opacity(animate ? 1 : 0)
         .animation(.spring(response: 0.25, dampingFraction: 0.65, blendDuration: 1).delay(delay), value: animate)
         .onAppear {
@@ -49,6 +50,6 @@ struct TimeCard: View {
 
 struct TimeCard_Previews: PreviewProvider {
     static var previews: some View {
-        TimeCard(color: .blue, label: "Minutes", value: 20, delay: 0.25)
+        TimeCard(color: .blue, label: "Minutes", value: 10, delay: 0.25)
     }
 }
