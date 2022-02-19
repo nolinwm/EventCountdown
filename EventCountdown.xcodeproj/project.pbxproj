@@ -11,6 +11,16 @@
 		5C09DA2B27C19632003D03F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA2A27C19632003D03F7 /* ContentView.swift */; };
 		5C09DA2D27C19633003D03F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C09DA2C27C19633003D03F7 /* Assets.xcassets */; };
 		5C09DA3027C19633003D03F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C09DA2F27C19633003D03F7 /* Preview Assets.xcassets */; };
+		5C09DA3827C19773003D03F7 /* EventCountdown.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA3627C19773003D03F7 /* EventCountdown.xcdatamodeld */; };
+		5C09DA3A27C19842003D03F7 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA3927C19842003D03F7 /* DataController.swift */; };
+		5C09DA3D27C199BA003D03F7 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA3C27C199BA003D03F7 /* EventList.swift */; };
+		5C09DA3F27C199CB003D03F7 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA3E27C199CB003D03F7 /* EventView.swift */; };
+		5C09DA4127C199D6003D03F7 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4027C199D6003D03F7 /* EventDetailView.swift */; };
+		5C09DA4427C199F4003D03F7 /* TimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4327C199F4003D03F7 /* TimeCard.swift */; };
+		5C09DA4627C1A3D0003D03F7 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4527C1A3D0003D03F7 /* EventRow.swift */; };
+		5C09DA4827C1A720003D03F7 /* RefreshTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4727C1A720003D03F7 /* RefreshTimer.swift */; };
+		5C09DA4A27C1A977003D03F7 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4927C1A977003D03F7 /* ColorExtension.swift */; };
+		5C09DA4C27C1ACC0003D03F7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4B27C1ACC0003D03F7 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		5C09DA2A27C19632003D03F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C09DA2C27C19633003D03F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C09DA2F27C19633003D03F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C09DA3727C19773003D03F7 /* EventCountdown.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventCountdown.xcdatamodel; sourceTree = "<group>"; };
+		5C09DA3927C19842003D03F7 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		5C09DA3C27C199BA003D03F7 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		5C09DA3E27C199CB003D03F7 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		5C09DA4027C199D6003D03F7 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		5C09DA4327C199F4003D03F7 /* TimeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCard.swift; sourceTree = "<group>"; };
+		5C09DA4527C1A3D0003D03F7 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		5C09DA4727C1A720003D03F7 /* RefreshTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTimer.swift; sourceTree = "<group>"; };
+		5C09DA4927C1A977003D03F7 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		5C09DA4B27C1ACC0003D03F7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				5C09DA2827C19632003D03F7 /* EventCountdownApp.swift */,
-				5C09DA2A27C19632003D03F7 /* ContentView.swift */,
+				5C09DA3627C19773003D03F7 /* EventCountdown.xcdatamodeld */,
+				5C09DA3927C19842003D03F7 /* DataController.swift */,
+				5C09DA3B27C199A9003D03F7 /* Views */,
+				5C09DA4D27C1B236003D03F7 /* Helpers */,
 				5C09DA2C27C19633003D03F7 /* Assets.xcassets */,
 				5C09DA2E27C19633003D03F7 /* Preview Content */,
 			);
@@ -65,6 +88,29 @@
 				5C09DA2F27C19633003D03F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5C09DA3B27C199A9003D03F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C09DA2A27C19632003D03F7 /* ContentView.swift */,
+				5C09DA3C27C199BA003D03F7 /* EventList.swift */,
+				5C09DA3E27C199CB003D03F7 /* EventView.swift */,
+				5C09DA4027C199D6003D03F7 /* EventDetailView.swift */,
+				5C09DA4327C199F4003D03F7 /* TimeCard.swift */,
+				5C09DA4527C1A3D0003D03F7 /* EventRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C09DA4D27C1B236003D03F7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5C09DA4727C1A720003D03F7 /* RefreshTimer.swift */,
+				5C09DA4927C1A977003D03F7 /* ColorExtension.swift */,
+				5C09DA4B27C1ACC0003D03F7 /* DateExtension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C09DA3827C19773003D03F7 /* EventCountdown.xcdatamodeld in Sources */,
+				5C09DA4C27C1ACC0003D03F7 /* DateExtension.swift in Sources */,
+				5C09DA4627C1A3D0003D03F7 /* EventRow.swift in Sources */,
+				5C09DA3A27C19842003D03F7 /* DataController.swift in Sources */,
+				5C09DA4827C1A720003D03F7 /* RefreshTimer.swift in Sources */,
+				5C09DA4427C199F4003D03F7 /* TimeCard.swift in Sources */,
 				5C09DA2B27C19632003D03F7 /* ContentView.swift in Sources */,
+				5C09DA3F27C199CB003D03F7 /* EventView.swift in Sources */,
+				5C09DA3D27C199BA003D03F7 /* EventList.swift in Sources */,
 				5C09DA2927C19632003D03F7 /* EventCountdownApp.swift in Sources */,
+				5C09DA4A27C1A977003D03F7 /* ColorExtension.swift in Sources */,
+				5C09DA4127C199D6003D03F7 /* EventDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +397,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C09DA3627C19773003D03F7 /* EventCountdown.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C09DA3727C19773003D03F7 /* EventCountdown.xcdatamodel */,
+			);
+			currentVersion = 5C09DA3727C19773003D03F7 /* EventCountdown.xcdatamodel */;
+			path = EventCountdown.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5C09DA1D27C19632003D03F7 /* Project object */;
 }
