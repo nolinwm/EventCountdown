@@ -15,7 +15,7 @@ struct EventDetailView: View {
     let event: Event?
     
     @State var name: String
-    @State private var date: Date = Date.midnightTomorrow()
+    @State private var date: Date = Date.midnightTomorrow
     @State private var color: Color = Color(hex: "#285FF4")
     
     private var saveDisabled: Bool {

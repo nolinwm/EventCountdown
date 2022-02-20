@@ -8,12 +8,12 @@
 import Foundation
 
 extension Date {
-    static func midnightTomorrow() -> Date {
+    static var midnightTomorrow: Date {
         let tomorrow = Date.now.addingTimeInterval(86_400)
         let components = Calendar.current.dateComponents([.year, .month, .day], from: tomorrow)
         let midnightTomorrow = Calendar.current.date(from: components)
 
-        return midnightTomorrow ?? tomorrow
+        return midnightTomorrow!
     }
     
     static func countdown(_ date: Date) -> DateComponents {
