@@ -11,10 +11,15 @@ struct EventRow: View {
     
     @ObservedObject var event: Event
     
+    private var eventIsPast: Bool {
+        guard let date = event.date else { return true }
+        return date <= Date.now
+    }
+    
     var body: some View {
         HStack {
             Image(systemName: "circle.fill")
-                .foregroundColor(Color(hex: event.colorAsHex))
+                .foregroundColor(eventIsPast ? .gray : Color(hex: event.colorAsHex))
             Text(event.name ?? "Event")
             Spacer()
         }

@@ -15,11 +15,23 @@ struct EventList: View {
         NSSortDescriptor(keyPath: \Event.date, ascending: false)
     ]) var events: FetchedResults<Event>
     
+    private var activeEvents: [Event] {
+        return events.filter {
+            $0.date != nil && $0.date! > Date.now
+        }
+    }
+    
+    private var pastEvents: [Event] {
+        return events.filter {
+            $0.date != nil && $0.date! <= Date.now
+        }
+    }
+    
     @State private var showingModal = false
     
     var body: some View {
         List {
-            ForEach(events) { event in
+            ForEach(activeEvents) { event in
                 NavigationLink {
                     EventView(event: event)
                 } label: {
@@ -27,6 +39,19 @@ struct EventList: View {
                 }
             }
             .onDelete(perform: deleteEvents)
+            
+            if pastEvents.count > 0 {
+                Section("Past") {
+                    ForEach(pastEvents) { event in
+                        NavigationLink {
+                            EventView(event: event)
+                        } label: {
+                            EventRow(event: event)
+                        }
+                    }
+                    .onDelete(perform: deleteEvents)
+                }
+            }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

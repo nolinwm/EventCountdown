@@ -21,6 +21,7 @@
 		5C09DA4827C1A720003D03F7 /* RefreshTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4727C1A720003D03F7 /* RefreshTimer.swift */; };
 		5C09DA4A27C1A977003D03F7 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4927C1A977003D03F7 /* ColorExtension.swift */; };
 		5C09DA4C27C1ACC0003D03F7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09DA4B27C1ACC0003D03F7 /* DateExtension.swift */; };
+		5CF30EDB27C1C99200E77007 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF30EDA27C1C99200E77007 /* NotificationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		5C09DA4727C1A720003D03F7 /* RefreshTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTimer.swift; sourceTree = "<group>"; };
 		5C09DA4927C1A977003D03F7 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5C09DA4B27C1ACC0003D03F7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5CF30EDA27C1C99200E77007 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				5C09DA4727C1A720003D03F7 /* RefreshTimer.swift */,
 				5C09DA4927C1A977003D03F7 /* ColorExtension.swift */,
 				5C09DA4B27C1ACC0003D03F7 /* DateExtension.swift */,
+				5CF30EDA27C1C99200E77007 /* NotificationHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				5C09DA2927C19632003D03F7 /* EventCountdownApp.swift in Sources */,
 				5C09DA4A27C1A977003D03F7 /* ColorExtension.swift in Sources */,
 				5C09DA4127C199D6003D03F7 /* EventDetailView.swift in Sources */,
+				5CF30EDB27C1C99200E77007 /* NotificationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
