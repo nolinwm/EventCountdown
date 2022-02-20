@@ -21,7 +21,7 @@ struct TimeCard: View {
             Circle()
                 .opacity(0)
             VStack(alignment: .center) {
-                Text("\(Int(value))")
+                Text("\(max(0, value))")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 Text(label)
@@ -50,6 +50,6 @@ struct TimeCard: View {
 
 struct TimeCard_Previews: PreviewProvider {
     static var previews: some View {
-        TimeCard(color: .blue, label: "Minutes", value: 10, delay: 0.25)
+        TimeCard(color: .blue, label: "Minutes", value: 20, delay: 0)
     }
 }
