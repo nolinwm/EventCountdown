@@ -11,17 +11,17 @@ struct EventView: View {
     
     let event: Event
     
-    var columns: [GridItem] =
-             Array(repeating: .init(.flexible()), count: 2)
-    
     @State private var showModal = false
     
     let timer = RefreshTimer()
-    @State private var refreshToggle: Bool = false
+    @State private var refreshToggle = false
     
     var countdown: DateComponents {
         return Date.countdown(event.date ?? Date.now)
     }
+    
+    var columns: [GridItem] =
+             Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
         ScrollView {
@@ -55,15 +55,13 @@ struct EventView: View {
                     .hidden()
             }
         }
-        .sheet(isPresented: $showModal, onDismiss: {
-            showModal = false
-        }, content: {
+        .navigationTitle(event.name ?? "Event")
+        .sheet(isPresented: $showModal) {
             EventDetailView(event: event, name: event.name ?? "")
-        })
+        }
         .onReceive(timer.currentTimePublisher) { newCurrentTime in
             self.refreshToggle.toggle()
         }
-        .navigationTitle(event.name ?? "Event")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {

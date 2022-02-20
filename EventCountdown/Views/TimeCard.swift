@@ -47,7 +47,6 @@ struct TimeCard: View {
     }
 }
 
-
 struct TimeCard_Previews: PreviewProvider {
     static var previews: some View {
         TimeCard(color: .blue, label: "Minutes", value: 20, delay: 0)
