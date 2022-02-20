@@ -14,8 +14,8 @@ struct NotificationHandler {
     
     func scheduleNotification(eventId: UUID, eventName: String, eventDate: Date) {
         let content = UNMutableNotificationContent()
-        content.title = eventName
-        content.subtitle = "Event occurred!"
+        content.title = "\(eventName)"
+        content.body = "Event has occurred!"
         content.sound = UNNotificationSound.default
         
         let trigger = UNCalendarNotificationTrigger(
