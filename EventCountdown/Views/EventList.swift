@@ -9,7 +9,11 @@ import SwiftUI
 
 struct EventList: View {
     
-    @FetchRequest(sortDescriptors: []) var events: FetchedResults<Event>
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(keyPath: \Event.date, ascending: false)
+    ]) var events: FetchedResults<Event>
     
     @State private var showingModal = false
     
@@ -22,6 +26,7 @@ struct EventList: View {
                     EventRow(event: event)
                 }
             }
+            .onDelete(perform: deleteEvents)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -35,6 +40,15 @@ struct EventList: View {
         .sheet(isPresented: $showingModal) {
             EventDetailView(event: nil, name: "")
         }
+    }
+    
+    func deleteEvents(at offsets: IndexSet) {
+        for index in offsets {
+            let event = events[index]
+            moc.delete(event)
+        }
+        
+        try? moc.save()
     }
 }
 
