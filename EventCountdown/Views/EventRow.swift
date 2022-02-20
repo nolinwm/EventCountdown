@@ -18,6 +18,7 @@ struct EventRow: View {
             Text(event.name ?? "Event")
             Spacer()
         }
+        .padding(10)
     }
 }
 
