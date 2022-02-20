@@ -38,7 +38,7 @@ struct EventList: View {
                     EventRow(event: event)
                 }
             }
-            .onDelete(perform: deleteEvents)
+            .onDelete(perform: deleteActiveEvents)
             
             if pastEvents.count > 0 {
                 Section("Past") {
@@ -49,7 +49,7 @@ struct EventList: View {
                             EventRow(event: event)
                         }
                     }
-                    .onDelete(perform: deleteEvents)
+                    .onDelete(perform: deletePastEvents)
                 }
             }
         }
@@ -67,14 +67,25 @@ struct EventList: View {
         }
     }
     
-    func deleteEvents(at offsets: IndexSet) {
+    func deleteActiveEvents(at offsets: IndexSet) {
         for index in offsets {
-            let event = events[index]
-            NotificationHandler.shared.removeNotification(eventId: event.id!)
-            moc.delete(event)
+            let event = activeEvents[index]
+            deleteEvent(event: event)
         }
-        
         try? moc.save()
+    }
+    
+    func deletePastEvents(at offsets: IndexSet) {
+        for index in offsets {
+            let event = pastEvents[index]
+            deleteEvent(event: event)
+        }
+        try? moc.save()
+    }
+    
+    func deleteEvent(event: Event) {
+        NotificationHandler.shared.removeNotification(eventId: event.id!)
+        moc.delete(event)
     }
 }
 
