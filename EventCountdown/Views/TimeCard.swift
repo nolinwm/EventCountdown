@@ -16,6 +16,15 @@ struct TimeCard: View {
     var delay: Double
     @State private var animate = false
     
+    // Remove the plural s from label if value is 1
+    var properLabel: String {
+        var str = label
+        if value == 1 {
+            str.removeLast()
+        }
+        return str
+    }
+    
     var body: some View {
         ZStack {
             Circle()
@@ -24,7 +33,7 @@ struct TimeCard: View {
                 Text("\(max(0, value))")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
-                Text(label)
+                Text(properLabel)
                     .font(.title2)
             }
             .foregroundColor(.white)
