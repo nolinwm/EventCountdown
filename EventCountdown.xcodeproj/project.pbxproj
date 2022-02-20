@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C09DA2527C19632003D03F7 /* EventCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C09DA2527C19632003D03F7 /* Event Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event Countdown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C09DA2827C19632003D03F7 /* EventCountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCountdownApp.swift; sourceTree = "<group>"; };
 		5C09DA2A27C19632003D03F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C09DA2C27C19633003D03F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		5C09DA2627C19632003D03F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C09DA2527C19632003D03F7 /* EventCountdown.app */,
+				5C09DA2527C19632003D03F7 /* Event Countdown.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			);
 			name = EventCountdown;
 			productName = EventCountdown;
-			productReference = 5C09DA2527C19632003D03F7 /* EventCountdown.app */;
+			productReference = 5C09DA2527C19632003D03F7 /* Event Countdown.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +339,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nolinmcfarland.EventCountdown;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Event Countdown";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,7 +368,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nolinmcfarland.EventCountdown;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Event Countdown";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
