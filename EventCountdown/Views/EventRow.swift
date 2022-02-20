@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EventRow: View {
     
-    let event: Event
+    @ObservedObject var event: Event
     
     var body: some View {
         HStack {
