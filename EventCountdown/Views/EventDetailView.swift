@@ -41,6 +41,7 @@ struct EventDetailView: View {
             
             Form {
                 TextField("Event Name", text: $name)
+                    .font(.headline)
                     .padding(10)
                 DatePicker("Occurs", selection: $date)
                     .padding(10)
