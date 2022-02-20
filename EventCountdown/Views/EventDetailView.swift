@@ -67,12 +67,17 @@ struct EventDetailView: View {
             event.name = self.name
             event.date = self.date
             event.colorAsHex = Color.convertToHex(self.color)
+            
+            NotificationHandler.shared.removeNotification(eventId: event.id!)
+            NotificationHandler.shared.scheduleNotification(eventId: event.id!, eventName: self.name, eventDate: self.date)
         } else {
             let newEvent = Event(context: moc)
             newEvent.id = UUID()
             newEvent.name = self.name
             newEvent.date = self.date
             newEvent.colorAsHex = Color.convertToHex(self.color)
+            
+            NotificationHandler.shared.scheduleNotification(eventId: newEvent.id!, eventName: self.name, eventDate: self.date)
         }
         
         try? moc.save()

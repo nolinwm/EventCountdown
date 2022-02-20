@@ -70,6 +70,7 @@ struct EventList: View {
     func deleteEvents(at offsets: IndexSet) {
         for index in offsets {
             let event = events[index]
+            NotificationHandler.shared.removeNotification(eventId: event.id!)
             moc.delete(event)
         }
         
