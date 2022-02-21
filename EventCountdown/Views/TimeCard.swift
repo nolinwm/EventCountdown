@@ -45,7 +45,7 @@ struct TimeCard: View {
                 .foregroundColor(value > 0 ? color : .gray)
                 .shadow(color: .black.opacity(value > 0 ? 0.125 : 0.0625), radius: 10, x: 0, y: 15)
                 .scaleEffect(value > 0 ? 1 : 0.9)
-                .animation(.spring(response: 0.25, dampingFraction: 0.65, blendDuration: 1).delay(delay), value: value)
+                .animation(.spring(response: 0.25, dampingFraction: 0.65, blendDuration: 1), value: value)
         )
         .scaleEffect(animate ? 1 : 0)
         .opacity(animate ? 1 : 0)
